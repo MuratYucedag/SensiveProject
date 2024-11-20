@@ -99,5 +99,12 @@ namespace SensiveProject.PresentationLayer.Controllers
 
             return View(updatedValue);
         }
+
+        [HttpPost]
+        public IActionResult UpdateArticle(Article article)
+        {
+            _articleService.TUpdate(article);
+            return RedirectToAction("ArticleListWithCategoryAndAppUser");
+        }
     }
 }
