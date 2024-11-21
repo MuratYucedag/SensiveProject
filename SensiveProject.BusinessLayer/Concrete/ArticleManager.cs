@@ -38,6 +38,12 @@ namespace SensiveProject.BusinessLayer.Concrete
         {
             return _articleDal.GetById(id);
         }
+
+        public Article TGetLastArticle()
+        {
+            return _articleDal.GetLastArticle();
+        }
+
         public void TInsert(Article entity)
         {
             _articleDal.Insert(entity);

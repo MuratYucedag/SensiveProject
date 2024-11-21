@@ -106,5 +106,11 @@ namespace SensiveProject.PresentationLayer.Controllers
             _articleService.TUpdate(article);
             return RedirectToAction("ArticleListWithCategoryAndAppUser");
         }
+
+        public IActionResult ArticleDetail(int id)
+        {
+            var value = _articleService.TGetById(id);
+            return View(value);
+        }
     }
 }
