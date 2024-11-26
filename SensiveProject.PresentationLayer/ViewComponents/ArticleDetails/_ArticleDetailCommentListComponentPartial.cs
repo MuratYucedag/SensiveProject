@@ -10,9 +10,9 @@ namespace SensiveProject.PresentationLayer.ViewComponents.ArticleDetails
         {
             _commentService = commentService;
         }
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(int id)
         {
-            var value = _commentService.TGetCommentsByArticleId(1);
+            var value = _commentService.TGetCommentsByArticleId(id);
             return View(value);
         }
     }
